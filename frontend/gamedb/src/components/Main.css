@@ -1,0 +1,28 @@
+/* Main.css */
+.homepage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.title {
+  font-size: 36px; /* adjust as needed */
+  color: black; /* adjust as needed */
+  font-family: Arial, sans-serif; /* adjust as needed */
+}
+
+.genre-label {
+  margin-top: 20px;
+  font-size: 24px; /* adjust as needed */
+}
+
+.genre-select {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 16px; /* adjust as needed */
+}
+
+.main-content {
+  flex-grow: 1;
+}

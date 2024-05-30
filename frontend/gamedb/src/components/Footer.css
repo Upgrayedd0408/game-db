@@ -1,0 +1,20 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f9fa; /* light gray */
+  margin-top: auto; /* pushes the footer to the bottom */
+}
+
+.footer-left, .footer-right {
+  font-size: 16px; /* adjust as needed */
+  color: black; /* adjust as needed */
+  font-family: Arial, sans-serif; /* adjust as needed */
+}
