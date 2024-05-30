@@ -1,0 +1,33 @@
+/* Header.css */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f9fa; /* light gray */
+}
+
+.logo {
+  font-size: 24px; /* adjust as needed */
+  color: black; /* adjust as needed */
+  font-family: Arial, sans-serif; /* adjust as needed */
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.login-button {
+  background-color: #007bff; /* blue */
+  color: white; /* white text */
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
