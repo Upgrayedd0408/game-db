@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS games CASCADE;
+CREATE TABLE games (
+  id SERIAL PRIMARY KEY NOT NULL,
+  name VARCHAR(255) NOT NULL,
+  store_url VARCHAR(255) NOT NULL,
+  trailer_url VARCHAR(255) NOT NULL,
+  controller_support BOOLEAN NOT NULL,
+  is_on_sale BOOLEAN NOT NULL,
+  language_id INTEGER REFERENCES languages(id) ON DELETE CASCADE,
+  genre_id INTEGER REFERENCES genres(id) ON DELETE CASCADE
+);
