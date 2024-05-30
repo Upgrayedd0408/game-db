@@ -1,5 +1,6 @@
-// Header.js
+
 import React from 'react';
+import { Link } from 'react-router-dom'; // import the Link component
 import './Header.css';
 
 function Header() {
@@ -7,9 +8,9 @@ function Header() {
     <header className="header">
       <h1 className="logo">GameDB</h1>
       <nav className="nav">
-        <a href="/">Home</a>
-        <a href="/wishlist">Wishlist</a>
-        <button className="login-button">Login</button>
+        <Link to="/">Home</Link>
+        <Link to="/wishlist">Wishlist</Link>
+        <Link to="/login" className="login-button">Login</Link> {/* Update this line */}
       </nav>
     </header>
   );
