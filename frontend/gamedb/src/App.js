@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Main from './components/Main';
-import Login from './components/Login';
-import Register from './components/Register';
-import Wishlist from './components/Wishlist';
-import Genre from './components/Genre'; 
+import Main from './routes/Main';
+import Login from './routes/Login';
+import Register from './routes/Register';
+import Wishlist from './routes/Wishlist';
+import Genre from './routes/Genre'; 
 
 function App() {
   return (

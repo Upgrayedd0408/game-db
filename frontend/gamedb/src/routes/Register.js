@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from './Header'; // import the Header component
-import Footer from './Footer'; // import the Footer component
-import '../styles/Register.css'; // You'll need to create this file
+import Header from '../components/Header'; // import the Header component
+import Footer from '../components/Footer'; // import the Footer component
+import '../styles/Register.scss'; // You'll need to create this file
 
 function Register() {
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from './Header'; // import the Header component
-import Footer from './Footer'; // import the Footer component
-import '../styles/Wishlist.css'; // You'll need to create this file
+import Header from '../components/Header'; // import the Header component
+import Footer from '../components/Footer'; // import the Footer component
+import '../styles/Wishlist.scss'; // You'll need to create this file
 
 function Wishlist() {
   return (
