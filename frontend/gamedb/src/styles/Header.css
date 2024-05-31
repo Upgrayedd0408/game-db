@@ -18,7 +18,8 @@
   gap: 20px;
 }
 
-.login-button {
+.login-button,
+.register-button {
   background-color: #007bff; /* blue */
   color: white; /* white text */
   border: none;
