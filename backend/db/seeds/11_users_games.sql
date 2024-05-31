@@ -1,6 +1,6 @@
 INSERT INTO users_games (user_id, game_id)
 VALUES
-(1, 2)
+(1, 2),
 (2, 1)
 
 
