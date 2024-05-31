@@ -2,7 +2,7 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import './Main.css'; // import the CSS file
+import '../styles/Main.css'; // import the CSS file
 
 function Main() {
   return (
