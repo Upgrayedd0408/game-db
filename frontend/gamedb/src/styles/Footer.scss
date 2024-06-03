@@ -9,12 +9,12 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #f8f9fa; /* light gray */
+  background-color: #333;
   margin-top: auto; /* pushes the footer to the bottom */
 }
 
 .footer-left, .footer-right {
-  font-size: 16px; /* adjust as needed */
-  color: black; /* adjust as needed */
-  font-family: Arial, sans-serif; /* adjust as needed */
+  font-size: 16px; 
+  color: white; 
+  font-family: Arial, sans-serif; 
 }

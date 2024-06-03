@@ -5,7 +5,12 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer-left">GameDB</div>
-      <div className="footer-right">Created by Mike Lowry and Nicholas Theisen</div>
+      <div className="footer-right">
+        Created by 
+        <a href="https://github.com/Upgrayedd0408" target="_blank" rel="noopener noreferrer">Mike Lowry</a> 
+        and 
+        <a href="https://github.com/NicholasTheisen" target="_blank" rel="noopener noreferrer">Nicholas Theisen</a>
+      </div>
     </footer>
   );
 }
