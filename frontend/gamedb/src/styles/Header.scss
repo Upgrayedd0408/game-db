@@ -4,20 +4,20 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #f8f9fa;
+  background-color: #333;
 }
 
 .logo {
-  font-size: 24px;
-  color: black;
-  font-family: Arial, sans-serif;
+  height: 75px; // Adjust as needed
+  width: auto;
 }
 
 .nav {
   display: flex;
   gap: 20px;
 }
-
+.home-button,
+.wishlist-button,
 .login-button,
 .register-button {
   background-color: #007bff;
