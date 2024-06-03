@@ -1,0 +1,15 @@
+.game-tiles {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 60%;
+  margin: 20px auto;
+}
+
+.game-tile {
+  width: 100%;
+  height: 200px; // Adjust as needed
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+}
