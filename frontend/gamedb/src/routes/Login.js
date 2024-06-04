@@ -6,8 +6,8 @@ import '../styles/Login.scss';
 function Login() {
   return (
     <div className="login">
-      <Header /> {/* Add this line */}
-      <h2 className="login-title">Login</h2>
+      <Header /> 
+      <h2 className="login-header">Login</h2>
       <form className="login-form">
         <label htmlFor="username">Username</label>
         <input type="text" id="username" />
@@ -17,7 +17,7 @@ function Login() {
 
         <button type="submit">Login</button>
       </form>
-      <Footer /> {/* Add this line */}
+      <Footer /> 
     </div>
   );
 }
