@@ -7,7 +7,7 @@ function Wishlist() {
   return (
     <div className="wishlist">
       <Header />
-      <h2 className="wishlist-title">Wishlist</h2>
+      <h2 className="wishlist-header">Wishlist</h2>
       <table className="wishlist-table">
         <thead>
           <tr>

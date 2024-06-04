@@ -1,13 +1,12 @@
 import React from 'react';
 import Header from '../components/Header'; // import the Header component
 import Footer from '../components/Footer'; // import the Footer component
-import '../styles/Register.scss'; // You'll need to create this file
-
+import '../styles/Register.scss';
 function Register() {
   return (
     <div className="register">
       <Header />
-      <h2 className="register-title">Register</h2>
+      <h2 className="register-header">Register</h2>
       <form className="register-form">
         <label htmlFor="username">Username</label>
         <input type="text" id="username" />
