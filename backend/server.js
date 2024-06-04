@@ -7,6 +7,7 @@ const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
+const session = require('express-session');
 
 const PORT = process.env.PORT || 8080;
 const app = express();
@@ -20,6 +21,13 @@ app.use(morgan('dev'));
 app.use(cors());
 app.use(bodyParser.json());
 app.use(express.json());
+app.use(session({
+  secret: 'your secret key',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: false } // set to true if your app is on https
+}));
+
 app.use(express.urlencoded({ extended: true }));
 app.use(
   '/styles',

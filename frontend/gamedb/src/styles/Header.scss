@@ -1,4 +1,3 @@
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -6,6 +5,7 @@
   padding: 20px;
   background-color: #333;
   width: 100%;
+  position: relative;
 }
 
 .logo {
@@ -17,10 +17,8 @@
   display: flex;
   gap: 20px;
 }
-.home-button,
-.wishlist-button,
-.login-button,
-.register-button {
+
+.nav-button {
   background-color: #007bff;
   color: white;
   border: none;
@@ -32,4 +30,17 @@
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 4px;
+}
+
+.username-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff; // change the color to white
+  font-size: 1.2em; // increase the font size
+}
+
+.logout-button {
+  background-color: #f00; // change the background color to red
 }

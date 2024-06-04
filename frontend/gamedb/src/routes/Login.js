@@ -15,6 +15,9 @@ function Login() {
     try {
       const response = await axios.post('/api/users/login', { username, password });
       if (response.status === 200) {
+        // Store the token and username
+        localStorage.setItem('token', response.data.token);
+        localStorage.setItem('username', username);
         window.location.href = '/';
       }
     } catch (error) {
