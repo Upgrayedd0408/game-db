@@ -1,0 +1,13 @@
+.games {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: white; /* all white background */
+}
+
+.title {
+  font-size: 36px; /* adjust as needed */
+  color: black; /* adjust as needed */
+  font-family: Arial, sans-serif; /* adjust as needed */
+}
