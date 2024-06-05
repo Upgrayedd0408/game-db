@@ -1,16 +1,16 @@
-
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #f8f9fa; /* light gray */
+  background-color: #333;
+  width: 100%;
+  position: relative;
 }
 
 .logo {
-  font-size: 24px; /* adjust as needed */
-  color: black; /* adjust as needed */
-  font-family: Arial, sans-serif; /* adjust as needed */
+  height: 75px; // Adjust as needed
+  width: auto;
 }
 
 .nav {
@@ -18,10 +18,9 @@
   gap: 20px;
 }
 
-.login-button,
-.register-button {
-  background-color: #007bff; /* blue */
-  color: white; /* white text */
+.nav-button {
+  background-color: #007bff;
+  color: white;
   border: none;
   padding: 10px 20px;
   text-align: center;
@@ -31,4 +30,17 @@
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 4px;
+}
+
+.username-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff; // change the color to white
+  font-size: 1.2em; // increase the font size
+}
+
+.logout-button {
+  background-color: #f00; // change the background color to red
 }

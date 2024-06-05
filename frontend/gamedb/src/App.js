@@ -6,6 +6,7 @@ import Register from './routes/Register';
 import Wishlist from './routes/Wishlist';
 import Genre from './routes/Genre'; 
 import Game from './routes/Game';
+import './global.scss';
 
 function App() {
   return (

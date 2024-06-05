@@ -1,30 +1,57 @@
-/* Wishlist.css */
+
 .wishlist {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  background-color: white; /* all white background */
+  background-image: url('../../public/background2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
 }
 
-.wishlist-title {
-  font-size: 36px; /* adjust as needed */
+.wishlist-header {
+  font-size: 2em;
+  color: #f0f0f0; 
+  margin-bottom: 20px;
+  letter-spacing: 2px; // Increase the space between letters
+  background-color: rgba(0, 0, 0, 0.6); // Add a darker, but opaque background color
+  padding: 10px; 
 }
+
 
 .wishlist-table {
-  margin-top: 20px;
+  width: 100%;
   border-collapse: collapse;
-  width: 100%; /* adjust as needed */
+  margin-top: 20px;
 }
 
-.wishlist-table th {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
-  background-color: #f2f2f2; /* light gray */
-}
-
+.wishlist-table th,
 .wishlist-table td {
   border: 1px solid #ddd;
   padding: 8px;
+  text-align: left;
+}
+
+.wishlist-table th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.wishlist-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.wishlist-table tr:hover {
+  background-color: #ddd;
+}
+
+.wishlist-table a {
+  color: #333;
+  text-decoration: none;
+}
+
+.wishlist-table a:hover {
+  color: #4CAF50;
 }
