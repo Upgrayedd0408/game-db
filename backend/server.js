@@ -38,7 +38,6 @@ app.use(
 );
 app.use(express.static('public'));
 
-app.use(cors());
 
 // Separated Routes for each Resource
 // Note: Feel free to replace the example routes below with your own
