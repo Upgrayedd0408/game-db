@@ -1,9 +1,21 @@
-import React from 'react';
-import Header from '../components/Header'; // import the Header component
-import Footer from '../components/Footer'; // import the Footer component
-import '../styles/Wishlist.scss'; // You'll need to create this file
+import React, { useEffect, useState } from 'react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import '../styles/Wishlist.scss';
 
 function Wishlist() {
+  const [games, setGames] = useState([]);
+
+  useEffect(() => {
+    fetch('/api/games')
+  .then(response => response.text())  // get the response text
+  .then(text => {
+    console.log(text);  // log the response text
+    return JSON.parse(text);  // parse the text as JSON
+  })
+  .then(data => setGames(data));
+  }, []);
+
   return (
     <div className="wishlist">
       <Header />
@@ -17,7 +29,13 @@ function Wishlist() {
           </tr>
         </thead>
         <tbody>
-          {/* Data will be populated here */}
+          {games.map(game => (
+            <tr key={game.id}>
+              <td>{game.name}</td>
+              <td>{game.genre}</td>
+              <td><a href={game.store_url}>Link</a></td>
+            </tr>
+          ))}
         </tbody>
       </table>
       <Footer />
