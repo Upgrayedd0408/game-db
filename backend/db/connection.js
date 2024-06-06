@@ -1,21 +1,15 @@
 // PG database client/connection setup
 const { Pool } = require('pg');
 
-/* const dbParams = {
-  host: process.env.DB_HOST,
-  port: process.env.DB_PORT,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASS,
-  database: process.env.DB_NAME
-}; */
+const dbParams = {
+  host: process.env.DB_HOST || 'localhost',
+  port: process.env.DB_PORT || 5432, 
+  user: process.env.DB_USER || 'labber1',
+  password: process.env.DB_PASS || 'labber1',
+  database: process.env.DB_NAME || 'finals' 
+};
 
-const db = new Pool({
-  user: 'labber1',
-  host: 'localhost',
-  database: 'finals',
-  password: 'labber1',
-  port: 5432
-});
+const db = new Pool(dbParams);
 
 db.connect();
 

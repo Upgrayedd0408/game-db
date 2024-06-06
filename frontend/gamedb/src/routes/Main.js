@@ -3,7 +3,6 @@ import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../styles/Main.scss'; // import the CSS file
-import GameTiles from '../components/GameTiles';
 
 function Main() {
   return (
@@ -20,7 +19,6 @@ function Main() {
           <option value="rpg">RPG</option>
           {/* Add more options as needed */}
         </select>
-        <GameTiles />
       </main>
       <Footer />
     </div>
