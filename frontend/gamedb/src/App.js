@@ -13,7 +13,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/games/:id" element={<Game />} /> {/* This will be dynamic */}
-        <Route path="/genre/:genre" element={<Genre />} /> {/* This will be dynamic */}
+        <Route path="/genre/:id" element={<Genre />} />
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />

@@ -10,6 +10,7 @@ const getAllGames = require("./db/queries/getAllGames");
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const gamesRouter = require('./routes/games');
+const genresRouter = require('./routes/genres');
 
 const PORT = process.env.PORT || 8080;
 const app = express();
@@ -54,18 +55,16 @@ app.use('/api/users', userApiRoutes);
 app.use('/users', usersRoutes);
 // Note: mount other resources here, using the same pattern above
 
-
-
 // Home page
 // Warning: avoid creating more routes in this file!
 // Separate them into separate routes files (see above).
 app.use('/api/users/login', loginRoutes); // New login route
 app.use('/api/games', gamesRouter); // New games route
+app.use('/api/genres', genresRouter); // New genres route
 
 app.get('/', (req, res) => {
   res.render('index');
 });
-
 
 app.get('/games', (req, res) => {
   getAllGames()
@@ -82,7 +81,6 @@ app.get('/games', (req, res) => {
     });
 });
 
-
 app.get('/games/:id', (req, res) => {
   const id = req.params.id
   getGameById(id)
@@ -90,8 +88,7 @@ app.get('/games/:id', (req, res) => {
       if (data.length === 0) {
         throw new Error('No game found');
       }
-      console.log("Server.js Line 83: ", data);
-      res.json(data);
+      res.json(data)
     })
     .catch((err) => {
       console.error(err)
@@ -99,10 +96,6 @@ app.get('/games/:id', (req, res) => {
     });
 });
 
-
-
-
-
 app.listen(PORT, () => {
-  console.log(`Example app listening on port ${PORT}`);
+  console.log(`Server is listening on port ${PORT}`);
 });
