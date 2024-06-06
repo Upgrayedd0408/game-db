@@ -4,10 +4,23 @@
   align-items: center;
   padding: 20px;
   background-color: white; /* all white background */
+  height: 100vh;
 }
 
-.title {
+.game-name {
   font-size: 36px; /* adjust as needed */
   color: black; /* adjust as needed */
   font-family: Arial, sans-serif; /* adjust as needed */
+  margin-bottom: 50px;
+}
+
+.information {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+
+.specifics {
+  width: 40%
 }

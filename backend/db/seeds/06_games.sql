@@ -1,5 +1,5 @@
-INSERT INTO games (name, store_url, trailer_url, controller_support, is_on_sale, language_id, genre_id)
+INSERT INTO games (name, description, store_url, trailer_url, controller_support, is_on_sale, language_id, genre_id)
 VALUES
-('The Legend Of Zelda: Breathe of the Wild', 'https://www.bestbuy.ca/en-ca/product/the-legend-of-zelda-breath-of-the-wild-switch/10440780', 'https://www.youtube.com/embed/1rPxiXXxftE?si=Wrj55ogM1lh41JY3', true, false, 1, 1),
-('Hogwarts Legacy', 'https://www.bestbuy.ca/en-ca/product/hogwarts-legacy-xbox-one/16016423?icmp=Recos_3across_tp_sllng_prdcts_plp&referrer=PLP+Top+Seller', 'https://www.youtube.com/embed/BtyBjOW8sGY?si=Mtw4dUkMyUi0RAn_', true, false, 1, 1);
+('The Legend Of Zelda: Breathe of the Wild', 'The Legend of Zelda: Breath of the Wild is a 2017 action-adventure game developed and published by Nintendo for the Nintendo Switch and Wii U. Set at the end of the Zelda timeline, the player controls an amnesiac Link as he sets out to save Princess Zelda and prevent Calamity Ganon from destroying the world.', 'https://www.bestbuy.ca/en-ca/product/the-legend-of-zelda-breath-of-the-wild-switch/10440780', 'https://www.youtube.com/embed/1rPxiXXxftE?si=Wrj55ogM1lh41JY3', true, false, 1, 1),
+('Hogwarts Legacy', 'Hogwarts Legacy is an action role-playing game played from a third-person perspective. It is set at Hogwarts School of Witchcraft and Wizardry and its surrounding areas, influenced by the Wizarding World franchise.', 'https://www.bestbuy.ca/en-ca/product/hogwarts-legacy-xbox-one/16016423?icmp=Recos_3across_tp_sllng_prdcts_plp&referrer=PLP+Top+Seller', 'https://www.youtube.com/embed/BtyBjOW8sGY?si=Mtw4dUkMyUi0RAn_', true, false, 1, 1);
 

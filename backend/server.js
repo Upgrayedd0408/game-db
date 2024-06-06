@@ -39,7 +39,6 @@ app.use(
 );
 app.use(express.static('public'));
 
-app.use(cors());
 
 // Separated Routes for each Resource
 // Note: Feel free to replace the example routes below with your own
@@ -48,6 +47,7 @@ const userApiRoutes = require('./routes/users-api');
 const usersRoutes = require('./routes/users');
 const gamesApiRoutes = require('./routes/games-api');
 const getGameById = require('./db/queries/getGameById');
+const getReviewsById = require('./db/queries/getReviewsById');
 const loginRoutes = require('./routes/login'); // New login route
 
 app.use('/api/users', userApiRoutes);
@@ -95,6 +95,26 @@ app.get('/games/:id', (req, res) => {
       res.status(404).send('Game not found');
     });
 });
+
+app.get('/reviews/:id', (req, res) =>{
+  const id = req.params.id;
+  getReviewsById(id)
+    .then(data => {
+      if (data.length === 0) {
+        throw new Error('No reviews found');
+      }
+      console.log("Server.js Line 109 Reviews:", data);
+      res.json(data)
+    })
+    .catch((err) => {
+      console.error(err)
+      res.status(404).send('Review not found');
+    });
+});
+
+
+
+
 
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);
