@@ -7,10 +7,11 @@ import GameDetails from "../components/GameDetails";
 import ReviewsList from "../components/ReviewsList"
 import Footer from "../components/Footer";
 
-function Game() {
+function Game(props) {
   const { id } = useParams();
   const [game, setGame] = useState(null);
   const [reviews, setReviews] = useState(null);
+  const { displayRating } = props;
 
   useEffect(() => {
     axios
@@ -38,8 +39,8 @@ function Game() {
   return (
     <div>
       <Header />
-      <GameDetails game={game} />
-      <ReviewsList reviews={reviews} />
+      <GameDetails game={game} displayRating={displayRating} />
+      <ReviewsList reviews={reviews} displayRating={displayRating} />
       <Footer />
     </div>
   );

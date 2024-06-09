@@ -1,7 +1,10 @@
 INSERT INTO users (username, password)
 VALUES
-('Gamer1', 'password123'),
-('Gamer2', 'hacker456');
+('MysticVoyager', 'password123'),
+('ShadowStrike', 'hacker456'),
+('LunarEclipse', 'hacker456'),
+('EchoWarrior', 'hacker456'),
+('BlazePhantom', 'hacker456')
 
 
 

@@ -2,77 +2,8 @@ import React from "react";
 import "../styles/Games.scss";
 
 const GameDetails = (props) => {
-  const { game } = props;
-
-  const displayRating = (game) => {
-    const rating = game[0].rating;
-
-    if (rating < 1) {
-      return (
-        <p>
-          Rating: <i class="fa-regular fa-star"></i>
-          <i class="fa-regular fa-star"></i>
-          <i class="fa-regular fa-star"></i>
-          <i class="fa-regular fa-star"></i>
-          <i class="fa-regular fa-star"></i>
-        </p>
-      );
-    } else if (rating === 1) {
-      return (
-        <p>
-          Rating: <i class="fa-solid fa-star"></i>
-          <i class="fa-regular fa-star"></i>
-          <i class="fa-regular fa-star"></i>
-          <i class="fa-regular fa-star"></i>
-          <i class="fa-regular fa-star"></i>
-        </p>
-      );
-    } else if (rating === 2) {
-      return (
-        <p>
-          Rating: <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-regular fa-star"></i>
-          <i class="fa-regular fa-star"></i>
-          <i class="fa-regular fa-star"></i>
-        </p>
-      );
-    } else if (rating === 3) {
-      return (
-        <p>
-          Rating: <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-regular fa-star"></i>
-          <i class="fa-regular fa-star"></i>
-        </p>
-      );
-    } else if (rating === 4) {
-      return (
-        <p>
-          Rating: <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-regular fa-star"></i>
-        </p>
-      );
-    } else if (rating === 5)
-      return (
-        <>
-          <p>
-            Rating:
-            <>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </>
-          </p>
-        </>
-      );
-  };
+  const { game, displayRating } = props;
+  const rating = game[0].rating;
 
   return (
     <div className="games">
@@ -93,7 +24,7 @@ const GameDetails = (props) => {
           <p>Supported Languages: {game[0].language}</p>
           <p>Supported Systems: {game[0].system_name}</p>
           <p>Genre: {game[0].category}</p>
-          {displayRating(game)}
+          {displayRating(rating)}
           
           
         </div>

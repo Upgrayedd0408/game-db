@@ -8,5 +8,6 @@ CREATE TABLE games (
   controller_support BOOLEAN NOT NULL,
   is_on_sale BOOLEAN NOT NULL,
   language_id INTEGER REFERENCES languages(id) ON DELETE CASCADE,
-  genre_id INTEGER REFERENCES genres(id) ON DELETE CASCADE
+  genre_id INTEGER REFERENCES genres(id) ON DELETE CASCADE,
+  system_id INTEGER REFERENCES systems(id) ON DELETE CASCADE
 );
