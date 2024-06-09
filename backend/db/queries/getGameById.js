@@ -6,7 +6,7 @@ const getGameById = async (id) => {
     FROM games
     JOIN languages ON games.language_id = languages.id
     JOIN genres ON games.genre_id = genres.id
-    FULL JOIN reviews ON games.id = reviews.game_id
+    JOIN reviews ON games.id = reviews.id
     JOIN systems ON system_id = systems.id
     WHERE games.id = $1
   `, [id])

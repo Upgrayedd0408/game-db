@@ -83,7 +83,6 @@ app.get('/games', (req, res) => {
 
 app.get('/games/:id', (req, res) => {
   const id = req.params.id
-  console.log(id)
   getGameById(id)
     .then(data => {
       if (data.length === 0) {
