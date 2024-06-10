@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../styles/Genre.scss';
@@ -30,13 +30,17 @@ function Genre() {
       <table className="genre-table">
         <thead>
           <tr>
-            <th>Game Title</th>
+            <th>Game Name</th>
           </tr>
         </thead>
         <tbody>
           {games.map(game => (
             <tr key={game.id}>
-              <td>{game.name}</td>
+              <td>
+                <Link to={`/games/${game.id}`} style={{ color: 'inherit', textDecoration: 'inherit'}}>
+                  {game.name}
+                </Link>
+              </td>
             </tr>
           ))}
         </tbody>
