@@ -3,14 +3,17 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  background-color: white; /* all white background */
-  // height: 100vh;
+  background-image: url('../../public/background6.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+  min-height:100vh;
 }
 
 .game-name {
-  font-size: 36px; /* adjust as needed */
-  color: black; /* adjust as needed */
-  font-family: Arial, sans-serif; /* adjust as needed */
+  font-size: 36px; 
+  color: rgb(255, 255, 255); 
+  font-family: Arial, sans-serif; 
   margin-bottom: 50px;
 }
 
@@ -18,9 +21,23 @@
   display: flex;
   justify-content: space-around;
   margin: 20px;
+  background-color: #d0e1f3; 
+  padding: 20px; 
+  border-radius: 5px; 
+  width: 80%; 
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-
 .specifics {
-  width: 40%
+  width: 40%;
+  font-size: 18px; // Make the text larger
+  line-height: 1.5; // Increase the line height for readability
+}
+
+.video {
+  width: 80%; // Make it wider
+  margin: 20px auto; // Center it horizontally
+  border: 1px solid #ddd; // Add a border
+  border-radius: 5px; // Round the corners
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); // Add a subtle shadow
 }
