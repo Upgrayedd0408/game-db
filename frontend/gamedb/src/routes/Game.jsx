@@ -31,7 +31,6 @@ function Game(props) {
       .catch((err) => console.log(err));
   }, [id]);
 
-
   if (!game) {
     return <div>Loading...</div>;
   }
@@ -40,7 +39,7 @@ function Game(props) {
     <div>
       <Header />
       <GameDetails game={game} displayRating={displayRating} />
-      <ReviewsList reviews={reviews} displayRating={displayRating} />
+      {reviews ? <ReviewsList reviews={reviews} displayRating={displayRating} /> : <div>Loading reviews...</div>}
       <Footer />
     </div>
   );
