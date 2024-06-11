@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import ReviewsListItem from './ReviewsListItem';
 import '../styles/ReviewsList.scss';
 import Popup from 'reactjs-popup';
+import MultipleItems from './MultipleItems';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 
 const ReviewsList = (props) => {
@@ -12,12 +15,26 @@ const ReviewsList = (props) => {
 
   // };
 
-  if (reviews !== null) {
-    const listAllReviews = reviews.map((review) => (
-      <ReviewsListItem key={review.id} review={review} displayRating={displayRating} />
-    ));
-
-    return <div className="reviews">{listAllReviews}</div>;
+  if (reviews !== null) { 
+    return (
+      <div>
+        <div className="new-review">
+        <Popup trigger={<button>Leave a Review</button>} modal nested>
+          {(close) => (
+            <div className="modal">
+              <div className="content">
+                test
+              </div>
+            <div>
+              <button onClick={() => close()}>Close modal</button>
+            </div>
+            </div>
+          )}
+        </Popup>
+        </div>
+        <MultipleItems reviews={reviews} displayRating={displayRating} />
+      </div>
+    );
   } else {
     return (
       <div className="no-reviews">
@@ -61,27 +78,3 @@ const ReviewsList = (props) => {
 
 
 export default ReviewsList;
-
-/* const PhotoList = (props) => {
-  const { isFavouritePhoto, addFavouritePhoto, displayPhotoModal, isInModal } = props;
-  const { photos } = props;
-
-
-  const listOfPhotos = photos.map((photo) =>
-    <PhotoListItem
-      key={photo.id}
-      photo={photo}
-      isInModal={isInModal}
-      isFavouritePhoto={isFavouritePhoto || false}
-      toggleFavourite={() => addFavouritePhoto(photo.id)}
-      displayPhotoModal={displayPhotoModal}
-    />);
-
-  return (
-    <ul className="photo-list">
-      {listOfPhotos}
-    </ul>
-  );
-};
-
-export default PhotoList; */
