@@ -11,6 +11,7 @@ const bodyParser = require('body-parser');
 const session = require('express-session');
 const gamesRouter = require('./routes/games');
 const genresRouter = require('./routes/genres');
+const wishlistRouter = require('./routes/wishlist');
 
 const PORT = process.env.PORT || 8080;
 const app = express();
@@ -61,6 +62,7 @@ app.use('/users', usersRoutes);
 app.use('/api/users/login', loginRoutes); // New login route
 app.use('/api/games', gamesRouter); // New games route
 app.use('/api/genres', genresRouter); // New genres route
+app.use('/api/wishlist', wishlistRouter); // New wishlist route
 
 app.get('/', (req, res) => {
   res.render('index');
