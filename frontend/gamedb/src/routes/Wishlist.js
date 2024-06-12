@@ -4,16 +4,12 @@ import Footer from '../components/Footer';
 import '../styles/Wishlist.scss';
 
 function Wishlist() {
-  const [games, setGames] = useState([]);
+  const [wishlist, setWishlist] = useState([]);
 
   useEffect(() => {
-    fetch('/api/games')
-  .then(response => response.text())  // get the response text
-  .then(text => {
-    console.log(text);  // log the response text
-    return JSON.parse(text);  // parse the text as JSON
-  })
-  .then(data => setGames(data));
+    fetch('/api/wishlist')
+      .then(response => response.json())
+      .then(data => setWishlist(data));
   }, []);
 
   return (
@@ -29,11 +25,11 @@ function Wishlist() {
           </tr>
         </thead>
         <tbody>
-          {games.map(game => (
+          {wishlist.map(game => (
             <tr key={game.id}>
               <td>{game.name}</td>
               <td>{game.genre}</td>
-              <td><a href={game.store_url}>Link</a></td>
+              <td><a href={game.url}>Store Link</a></td>
             </tr>
           ))}
         </tbody>
