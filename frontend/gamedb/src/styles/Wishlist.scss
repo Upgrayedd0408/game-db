@@ -22,33 +22,43 @@
 
 
 .wishlist-table {
-  width: 100%;
-  border-collapse: collapse;
   margin-top: 20px;
-}
+  width: 80%;
+  border-collapse: separate; // Change to separate to allow border-radius
+  border-spacing: 0; // Remove spacing between cells
+  overflow: hidden; // Hide the overflow to allow border-radius
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); // Add a shadow
 
-.wishlist-table th,
-.wishlist-table td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
-}
+  th, td {
+    border: 1px solid white;
+    padding: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease; // Add a transition for hover effect
+  }
 
-.wishlist-table th {
-  background-color: #4CAF50;
-  color: white;
-}
+  th {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-top-left-radius: 10px; // Add rounded corners to the top left
+    border-top-right-radius: 10px; // Add rounded corners to the top right
+  }
 
-.wishlist-table tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
+  td {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+  }
 
-.wishlist-table tr:hover {
-  background-color: #ddd;
+  tr:hover td {
+    background-color: rgba(0, 0, 0, 0.7); // Add a hover effect to the rows
+  }
+
+  tr:nth-child(even) td {
+    background-color: rgba(0, 0, 0, 0.6); // Add alternating row colors
+  }
 }
 
 .wishlist-table a {
-  color: #333;
+  color: #fff;
   text-decoration: none;
 }
 
