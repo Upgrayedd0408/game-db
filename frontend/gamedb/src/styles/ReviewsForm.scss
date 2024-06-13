@@ -1,0 +1,44 @@
+.username {
+  margin-bottom: 10px;
+}
+
+label {
+
+  input {
+    margin-left: 5px;
+    border-radius: 5px;
+  }
+}
+
+.star-rating {
+  margin-bottom: 10px;
+}
+
+.review-message {
+
+  textarea {
+    width: 390px;
+    height: 120px;
+  }
+}
+
+.submit {
+  position: relative;
+  left: 325px;
+  display: inline-block;
+  top: 48px;
+
+  input {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+}

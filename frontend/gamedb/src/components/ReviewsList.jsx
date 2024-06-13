@@ -5,6 +5,7 @@ import Popup from 'reactjs-popup';
 import MultipleItems from './MultipleItems';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import ReviewsForm from './ReviewsForm';
 
 
 const ReviewsList = (props) => {
@@ -23,10 +24,11 @@ const ReviewsList = (props) => {
           {(close) => (
             <div className="modal">
               <div className="content">
-                test
+                <p>Leave a Review!</p>
+                <ReviewsForm />
               </div>
-            <div>
-              <button onClick={() => close()}>Close modal</button>
+            <div className="cancel-button">
+              <button onClick={() => close()}>Cancel</button>
             </div>
             </div>
           )}
@@ -43,29 +45,10 @@ const ReviewsList = (props) => {
           {(close) => (
             <div className="modal">
               <div className="content">
-                test
-                {/* <form className="login-form" onSubmit={handleSubmit}>
-                  <label htmlFor="username">Username</label>
-                  <input
-                    type="text"
-                    id="username"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                  />
-
-                  <label htmlFor="password">Password</label>
-                  <input
-                    type="password"
-                    id="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                  />
-
-                  <button type="submit">Login</button>
-                </form> */}
+                <ReviewsForm />
               </div>
-              <div>
-                <button onClick={() => close()}>Close modal</button>
+              <div className="cancel-button">
+                <button onClick={() => close()}>Cancel</button>
               </div>
             </div>
           )}

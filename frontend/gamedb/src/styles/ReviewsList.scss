@@ -55,6 +55,35 @@
   height: 400px;
   width: 400px;
   border: solid 2px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.content {
+   
+  p {
+    font-size: 24px;
+  }
+}
+
+.cancel-button {
+  position: relative;
+  left: 240px;
+  top: 1px;
+
+  button {
+    padding: 10px;
+    background-color: #ffffff;
+    color: black;
+    border: solid 1px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
 }
 
 
