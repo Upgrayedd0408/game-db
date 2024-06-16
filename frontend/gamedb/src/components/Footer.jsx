@@ -6,9 +6,9 @@ function Footer() {
     <footer className="footer">
       <div className="footer-left">GameDB</div>
       <div className="footer-right">
-        Created by 
+        <span>Created by </span> 
         <a href="https://github.com/Upgrayedd0408" target="_blank" rel="noopener noreferrer">Mike Lowry</a> 
-        and 
+        <span> and </span>
         <a href="https://github.com/NicholasTheisen" target="_blank" rel="noopener noreferrer">Nicholas Theisen</a>
       </div>
     </footer>

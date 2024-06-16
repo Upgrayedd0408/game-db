@@ -14,8 +14,19 @@ body {
   width: 100%;
 }
 
-.footer-left, .footer-right {
+.footer-left {
   font-size: 16px; 
   color: white; 
   font-family: Arial, sans-serif; 
+}
+
+.footer-right {
+  font-size: 16px; 
+  color: white; 
+  font-family: Arial, sans-serif; 
+  margin-right: 30px;
+}
+
+a {
+  color: white;
 }
