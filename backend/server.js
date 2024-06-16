@@ -11,6 +11,7 @@ const bodyParser = require('body-parser');
 const session = require('express-session');
 const gamesRouter = require('./routes/games');
 const genresRouter = require('./routes/genres');
+const db = require('./db/connection.js');
 const wishlistRouter = require('./routes/wishlist');
 
 const PORT = process.env.PORT || 8080;
@@ -50,6 +51,7 @@ const gamesApiRoutes = require('./routes/games-api');
 const getGameById = require('./db/queries/getGameById');
 const getReviewsById = require('./db/queries/getReviewsById');
 const loginRoutes = require('./routes/login'); // New login route
+// const reviewsApiRoutes = require('./routes/reviews-api')
 
 app.use('/api/users', userApiRoutes);
 // app.use('/api/widgets', widgetApiRoutes);
@@ -62,6 +64,7 @@ app.use('/users', usersRoutes);
 app.use('/api/users/login', loginRoutes); // New login route
 app.use('/api/games', gamesRouter); // New games route
 app.use('/api/genres', genresRouter); // New genres route
+// app.use('/api/reviews', reviewsApiRoutes); // New reviews route
 app.use('/api/wishlist', wishlistRouter); // New wishlist route
 
 app.get('/', (req, res) => {
@@ -113,6 +116,25 @@ app.get('/reviews/:id', (req, res) =>{
       res.status(404).send('Review not found');
     });
 });
+
+app.post('/reviews/:id', async (req, res) => {
+  const { username, textarea, rating } = req.body;
+  const game_id = req.params.id;
+  console.log("Server.js line 121: ", game_id);
+
+  const user_id = await db.query('SELECT id FROM users WHERE username = $1', [username]).then((data) => {return data.rows[0].id});
+  console.log("Server.js line 123: ", user_id);
+
+  try {
+    await db.query('INSERT INTO reviews (rating, message, game_id, user_id) VALUES ($1, $2, $3, $4) RETURNING *', [rating, textarea, game_id, user_id])
+
+    res.json({ message: 'Review submitted successfully' });
+    
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ error: 'There was an error submitting a new review '});
+  }
+})
 
 
 

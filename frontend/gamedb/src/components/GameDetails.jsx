@@ -2,8 +2,9 @@ import React from "react";
 import "../styles/Games.scss";
 
 const GameDetails = (props) => {
-  const { game, displayRating } = props;
+  const { game, displayRating, id } = props;
   const rating = game[0].rating;
+  
 
   return (
     <div className="games">
