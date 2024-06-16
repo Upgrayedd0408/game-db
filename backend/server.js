@@ -12,6 +12,7 @@ const session = require('express-session');
 const gamesRouter = require('./routes/games');
 const genresRouter = require('./routes/genres');
 const db = require('./db/connection.js');
+const wishlistRouter = require('./routes/wishlist');
 
 const PORT = process.env.PORT || 8080;
 const app = express();
@@ -64,6 +65,7 @@ app.use('/api/users/login', loginRoutes); // New login route
 app.use('/api/games', gamesRouter); // New games route
 app.use('/api/genres', genresRouter); // New genres route
 // app.use('/api/reviews', reviewsApiRoutes); // New reviews route
+app.use('/api/wishlist', wishlistRouter); // New wishlist route
 
 app.get('/', (req, res) => {
   res.render('index');
