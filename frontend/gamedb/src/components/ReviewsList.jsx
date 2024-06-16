@@ -9,7 +9,7 @@ import ReviewsForm from './ReviewsForm';
 
 
 const ReviewsList = (props) => {
-  const { reviews, displayRating } = props;
+  const { reviews, displayRating, id } = props;
 
   // const handleSubmit = async (event) => {
   //   event.preventDefault();
@@ -25,7 +25,7 @@ const ReviewsList = (props) => {
             <div className="modal">
               <div className="content">
                 <p>Leave a Review!</p>
-                <ReviewsForm />
+                <ReviewsForm id={id} />
               </div>
             <div className="cancel-button">
               <button onClick={() => close()}>Cancel</button>

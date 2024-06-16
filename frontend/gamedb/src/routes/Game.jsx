@@ -12,6 +12,7 @@ function Game(props) {
   const [game, setGame] = useState(null);
   const [reviews, setReviews] = useState(null);
   const { displayRating } = props;
+  
 
   useEffect(() => {
     axios
@@ -39,7 +40,7 @@ function Game(props) {
     <div>
       <Header />
       <GameDetails game={game} displayRating={displayRating} />
-      {reviews ? <ReviewsList reviews={reviews} displayRating={displayRating} /> : <div>Loading reviews...</div>}
+      {reviews ? <ReviewsList id={id} reviews={reviews} displayRating={displayRating} /> : <div>Loading reviews...</div>}
       <Footer />
     </div>
   );

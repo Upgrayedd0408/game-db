@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import StarHandler from "./StarHandler";
-import "../styles/ReviewsForm.scss"
+import "../styles/ReviewsForm.scss";
+import axios from 'axios';
 
-function ReviewsForm() {
+function ReviewsForm(props) {
   const [inputs, setInputs] = useState({});
   const [textarea, setTextarea] = useState("Please enter your review here");
   const [rating, setRating] = useState(0);
+  const username = localStorage.getItem('username');
+  const { id } = props
 
   const handleChange = (event) => {
     const name = event.target.name;
@@ -18,9 +21,19 @@ function ReviewsForm() {
     setTextarea(event.target.value);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    alert(inputs);
+    
+    try {
+      const response = await axios.post(`http://localhost:8080/reviews/${id}`, { username, textarea, rating });
+      if (response.status === 200) {
+        // Store the token and username
+        alert('Review submitted successfully!');
+        window.location.reload();
+      }
+    } catch (error) {
+      console.error("Reviews Form Line 32: ", error);
+    }
   };
 
   return (
@@ -31,7 +44,8 @@ function ReviewsForm() {
           <input
             type="text"
             name="username"
-            value={inputs.username || ""}
+            value={username}
+            placeholder={username}
             onChange={handleChange}
           />
         </label>
@@ -44,9 +58,7 @@ function ReviewsForm() {
       <div className="review-message">
         <textarea value={textarea} onChange={handleTextAreaChange} />
       </div>
-      <div className="submit">
         <input type="submit" />
-      </div>
     </form>
   );
 }
