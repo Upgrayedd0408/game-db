@@ -2,16 +2,22 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  position: relative;
+  margin: 0;
+  padding-bottom: 70px; // Adjust according to the height of your footer
 }
 
 .footer {
+  position: absolute;
+  bottom: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
   background-color: #333;
-  margin-top: auto; /* pushes the footer to the bottom */
-  width: 100%;
+  width: calc(100% - 8px); // Subtract the scrollbar width
+  height: 70px; // Adjust according to your footer's height
+  box-sizing: border-box; // Include padding and border in the element's total width and height
 }
 
 .footer-left {
@@ -24,7 +30,7 @@ body {
   font-size: 16px; 
   color: white; 
   font-family: Arial, sans-serif; 
-  margin-right: 30px;
+  margin-right: 10px; // Reduce the right margin
 }
 
 a {

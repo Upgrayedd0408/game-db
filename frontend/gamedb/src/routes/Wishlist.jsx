@@ -34,7 +34,9 @@ function Wishlist() {
           ))}
         </tbody>
       </table>
-      <Footer />
+      <div className="footer">
+        <Footer />
+      </div>
     </div>
   );
 }
