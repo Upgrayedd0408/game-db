@@ -33,6 +33,7 @@ function Register() {
   };
 
   return (
+    <>
     <div className="register">
       <Header />
       <h2 className="register-header">Register</h2>
@@ -49,8 +50,9 @@ function Register() {
 
         <button type="submit">Register</button>
       </form>
-      <Footer />
     </div>
+    <Footer />
+    </>
   );
 }
 

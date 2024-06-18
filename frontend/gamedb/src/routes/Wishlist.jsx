@@ -13,6 +13,7 @@ function Wishlist() {
   }, []);
 
   return (
+    <>
     <div className="wishlist">
       <Header />
       <h2 className="wishlist-header">Wishlist</h2>
@@ -34,10 +35,9 @@ function Wishlist() {
           ))}
         </tbody>
       </table>
-      <div className="footer">
-        <Footer />
-      </div>
     </div>
+    <Footer />
+  </>
   );
 }
 
