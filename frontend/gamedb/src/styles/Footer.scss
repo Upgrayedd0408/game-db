@@ -2,20 +2,16 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  position: relative;
   margin: 0;
-  padding-bottom: 70px; // Adjust according to the height of your footer
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
   background-color: #333;
-  width: calc(100% - 8px); // Subtract the scrollbar width
+  width: 100%;
   height: 70px; // Adjust according to your footer's height
   box-sizing: border-box; // Include padding and border in the element's total width and height
 }

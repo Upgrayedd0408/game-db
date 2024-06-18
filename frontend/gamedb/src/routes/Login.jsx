@@ -26,6 +26,7 @@ function Login() {
   };
 
   return (
+    <>
     <div className="login">
       <Header />
       <h2 className="login-header">Login</h2>
@@ -39,8 +40,9 @@ function Login() {
 
         <button type="submit">Login</button>
       </form>
-      <Footer />
     </div>
+    <Footer />
+    </>
   );
 }
 

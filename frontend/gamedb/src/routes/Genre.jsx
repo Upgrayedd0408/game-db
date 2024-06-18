@@ -52,7 +52,8 @@ function Genre() {
   }
 
   return (
-    <div className="genre">
+    <>
+    <div className="genre" style={{ flex: '1 0 auto' }}>
       <Header />
       <h2 className="genre-title">Genre: {genre.category}</h2>
       <table className="genre-table">
@@ -79,8 +80,9 @@ function Genre() {
           ))}
         </tbody>
       </table>
-      <Footer />
     </div>
+    <Footer />
+  </>
   );
 }
 
